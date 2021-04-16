@@ -1,12 +1,11 @@
-from django.views.generic import TemplateView
+#from django.views.generic import TemplateView
 from django.http import HttpResponseRedirect,HttpResponse
 from django.shortcuts import redirect, render
 from django.contrib import auth
 from django.contrib.auth.models import User,auth
 from django.template.context_processors import csrf
-from django.shortcuts import redirect, render
 from votingpanel.models import Voter,Candidate,Position,Admin,CountVote
-from django.views import generic
+#from django.views import generic
 from django.contrib import messages
 from django.contrib.auth import get_user_model
 from django.db.models import  Count
@@ -74,6 +73,7 @@ def submit(request):
         can = request.POST.get('canname')
         c = Candidate.objects.get(candidateName = can)
         pos = c.position_id
+        #return HttpResponse(pos)
         us = request.user
         u = us.id
         c = Candidate.objects.get(candidateName = can)

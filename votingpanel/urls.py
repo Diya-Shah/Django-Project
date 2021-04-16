@@ -20,6 +20,7 @@ urlpatterns = [
   url(r'voting/',views.voting),
   url(r'displaycandidate/',views.displaycandidate),
   url(r'submit/',views.submit),
+  path('submit/',views.submit),
   url(r'displayPosition/',views.displayPosition),
   url(r'result/',views.result),
   path('removeVoter/',views.removeVoter),
